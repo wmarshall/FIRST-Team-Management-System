@@ -1,0 +1,29 @@
+$def with (content)
+
+$ root = "http://0.0.0.0:8080/static/"
+<html>
+	<head>
+		<link href="${root}index.css" rel="stylesheet" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
+		<script src="${root}issues.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="title">MORT Team 11</div>
+		<div id="content">
+			<div id="top">
+				<div id="menu">
+					<a href="/">announcements</a> |
+					<a href="/issues">current issues</a> |
+					<a href="">subteam statuses</a> |
+					<a href="">subteam requests</a> | 
+					<a href="">budgets</a>
+				</div>
+			</div>
+			
+			<div id="colwrap">
+				$:content
+			</div>
+			<div id="footer">MORT Team 11</div>
+		</div>
+	</body>
+</html>

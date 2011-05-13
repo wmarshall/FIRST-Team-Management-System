@@ -1,0 +1,144 @@
+body {
+	text-align: center;
+	background-color: black;
+	
+	font-family: arial;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#title {
+	color: white;
+}
+
+/***************************/
+
+#content {
+	clear: both;
+	margin: 10 auto;
+	padding: 10;
+	
+	text-align: left;
+	background-color: white;
+	color: black;
+	width: 1200px;
+	
+	border-radius: 10px;
+}
+
+/***************************/
+
+#top {
+	width: 1200px;
+	margin-bottom: 40px;
+}
+
+#menu {
+	float: left;
+}
+
+/***************************/
+
+#colwrap {
+	width: 1200px;
+}
+
+#page {
+	width: 900px;
+	float: left;
+}
+
+/***************************/
+
+#entry {
+	margin-bottom: 10px;
+	padding: 10;
+	width: 880px;
+	background-color: #F0E990;
+	border-radius: 5px;
+}
+
+#entryheader {
+	width: 880px;
+	margin-bottom: 50px;
+}
+
+#posttitle {
+	width: 440px;
+	font-style: bold;
+	float: left;
+}
+
+#date {
+	width: 440px;
+	text-align: right;
+	float: right;
+}
+
+/***************************/
+
+table {
+	width: 900px;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+tbody {
+	background-color: #F0E990;
+}
+
+tr {
+	border-bottom: 1px solid #FFFFFF;
+}
+
+td {
+	padding: 5px;
+}
+
+thead {
+	background-color: #DAD590;
+}
+
+/***************************/
+
+#sidebar {
+	width: 290px;
+	float: right;
+}
+
+#sidemodule {
+	background-color: #B3B3B3;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	
+	text-align: center;
+}
+
+/***************************/
+
+#addissueform {
+	display: none;
+	text-align: center;
+}
+
+/***************************/
+
+#settings {
+	display: none;
+}
+
+/***************************/
+
+#footer {
+	padding-top: 20px;
+	text-align: center;
+	clear: both;
+}
