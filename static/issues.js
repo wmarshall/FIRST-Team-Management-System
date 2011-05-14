@@ -1,11 +1,25 @@
 $(document).ready(function() {
 	$("#showaddissue").click(function(e) {
 		e.preventDefault();
-		$("#addissueform").slideDown("fast");
+		$("#addissueformdiv").slideDown("fast");
 	});
 	$("#canceladdissue").click(function(e) {
 		e.preventDefault();
-		$("#addissueform").slideUp("fast");
+		$("#addissueformdiv").slideUp("fast");
+	});
+	$("#addissueform").submit(function(e) {
+		e.preventDefault();
+		$("#tableissues").html("<tr>\
+		<td width='600px'>" + $("[name=issuetext]").val() + "</td>\
+		<td>" + $("[name=issuepriority]").val() + "</td>\
+		<td>" + "5/11" + "</td>\
+		<td>" + "Pat" + "</td>\
+		</tr>" + $("#tableissues").html());
+		
+		$("#addissueformdiv").slideUp("fast");
+		$("[name=issuetext]").html("");
+		
+		$.post("issues", $("#addissueform").serialize());
 	});
 	
 	$("#showsettings").click(function(e) {

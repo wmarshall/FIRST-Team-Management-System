@@ -1,19 +1,19 @@
-$def with (sideuser)
+$def with (modules, issues)
 
 <div id="page">
-	<div id="addissueform">
-		<form>
+	<div id="addissueformdiv">
+		<form method="POST" action="../issues" id="addissueform">
 			issue:<br />
-			<textarea cols="75" rows="7"></textarea><br />
+			<textarea cols="75" rows="7" name="issuetext"></textarea><br />
 			
 			priority:
-			<select>
+			<select name="issuepriority">
 				<option>low</option>
 				<option>medium</option>
 				<option>high</option>
 			</select>
 			subteam:
-			<select>
+			<select name="issuesubteam">
 				<option>end effector</option>
 				<option>drive train</option>
 				<option>programming</option>
@@ -22,7 +22,7 @@ $def with (sideuser)
 			</select>
 			
 			<br /><br />
-			
+			 
 			<input type="submit" value="submit issue" />
 			<input type="button" id="canceladdissue" value="cancel" />
 		</form>
@@ -37,67 +37,19 @@ $def with (sideuser)
 				<td>posted by</td>
 			</tr>
 		</thead>
-		<tbody>
-			<tr>
-				<td width="600px">Everything is wrong. Nothing is working. I smell smoke. Oh no, there goes the lights. Wait...what is the robot doin- OH DEAR LORD</td>
-				<td>High</td>
-				<td>5/11</td>
-				<td>Pat Jameson</td>
-			</tr>
-			<tr>
-				<td width="600px">Everything is wrong. Nothing is working. I smell smoke. Oh no, there goes the lights. Wait...what is the robot doin- OH DEAR LORD</td>
-				<td>High</td>
-				<td>5/11</td>
-				<td>Pat Jameson</td>
-			</tr>
-			<tr>
-				<td width="600px">Everything is wrong. Nothing is working. I smell smoke. Oh no, there goes the lights. Wait...what is the robot doin- OH DEAR LORD</td>
-				<td>High</td>
-				<td>5/11</td>
-				<td>Pat Jameson</td>
-			</tr>
-		</tbody>
-	</table>
-	End Effector
-	<table>
-		<thead>
-			<tr>
-				<td>issue</td>
-				<td>priority</td>
-				<td>date</td>
-				<td>posted by</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td width="600px">Everything is wrong. Nothing is working. I smell smoke. Oh no, there goes the lights. Wait...what is the robot doin- OH DEAR LORD</td>
-				<td>High</td>
-				<td>5/11</td>
-				<td>Pat Jameson</td>
-			</tr>
-			<tr>
-				<td width="600px">Everything is wrong. Nothing is working. I smell smoke. Oh no, there goes the lights. Wait...what is the robot doin- OH DEAR LORD</td>
-				<td>High</td>
-				<td>5/11</td>
-				<td>Pat Jameson</td>
-			</tr>
-			<tr>
-				<td width="600px">Everything is wrong. Nothing is working. I smell smoke. Oh no, there goes the lights. Wait...what is the robot doin- OH DEAR LORD</td>
-				<td>High</td>
-				<td>5/11</td>
-				<td>Pat Jameson</td>
-			</tr>
+		<tbody id="tableissues">
+			$:issues
 		</tbody>
 	</table>
 </div>
 <div id="sidebar">
-	<a href="" id="showaddissue"><div id="sidemodule">
+	<a href="" id="showaddissue"><div class="sidemodule">
 		<center>add an issue</center>
 	</div></a>
-	<div id="sidemodule">
+	<div class="sidemodule">
 		<div id="countdown">time until monty madness: 10 days</div>
 	</div>
-	<div id="sidemodule">
-		$:sideuser
+	<div class="sidemodule">
+		$:modules.sideuser()
 	</div>
 </div>

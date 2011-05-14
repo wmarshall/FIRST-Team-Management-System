@@ -113,7 +113,7 @@ thead {
 	float: right;
 }
 
-#sidemodule {
+.sidemodule {
 	background-color: #B3B3B3;
 	padding: 10px;
 	margin-bottom: 10px;
@@ -124,7 +124,7 @@ thead {
 
 /***************************/
 
-#addissueform {
+#addissueformdiv {
 	display: none;
 	text-align: center;
 }
