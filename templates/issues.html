@@ -14,9 +14,10 @@ $def with (modules, issues)
 			</select>
 			subteam:
 			<select name="issuesubteam">
-				<option>end effector</option>
-				<option>drive train</option>
+				<option value="endeffector">end effector</option>
 				<option>programming</option>
+				<option value="drivetrain">drive train</option>
+				<option>electrical</option>
 				<option>cad</option>
 				<option>other</option>
 			</select>
@@ -27,18 +28,74 @@ $def with (modules, issues)
 			<input type="button" id="canceladdissue" value="cancel" />
 		</form>
 	</div>
+	End Effector
+	<table>
+		<thead>
+			<tr>
+				<td width="600px">issue</td>
+				<td width="100px">priority</td>
+				<td width="100px">date</td>
+				<td width="100px">posted by</td>
+			</tr>
+		</thead>
+		<tbody id="endeffectorissues">
+			$:issues['endeffector']
+		</tbody>
+	</table>
 	Programming
 	<table>
 		<thead>
 			<tr>
-				<td>issue</td>
-				<td>priority</td>
-				<td>date</td>
-				<td>posted by</td>
+				<td width="600px">issue</td>
+				<td width="100px">priority</td>
+				<td width="100px">date</td>
+				<td width="100px">posted by</td>
 			</tr>
 		</thead>
-		<tbody id="tableissues">
-			$:issues
+		<tbody id="programmingissues">
+			$:issues['programming']
+		</tbody>
+	</table>
+	Electrical
+	<table>
+		<thead>
+			<tr>
+				<td width="600px">issue</td>
+				<td width="100px">priority</td>
+				<td width="100px">date</td>
+				<td width="100px">posted by</td>
+			</tr>
+		</thead>
+		<tbody id="electricalissues">
+			$:issues['electrical']
+		</tbody>
+	</table>
+	Drive Train
+	<table>
+		<thead>
+			<tr>
+				<td width="600px">issue</td>
+				<td width="100px">priority</td>
+				<td width="100px">date</td>
+				<td width="100px">posted by</td>
+			</tr>
+		</thead>
+		<tbody id="drivetrainissues">
+			$:issues['drivetrain']
+		</tbody>
+	</table>
+	CAD
+	<table>
+		<thead>
+			<tr>
+				<td width="600px">issue</td>
+				<td width="100px">priority</td>
+				<td width="100px">date</td>
+				<td width="100px">posted by</td>
+			</tr>
+		</thead>
+		<tbody id="cadissues">
+			$:issues['cad']
 		</tbody>
 	</table>
 </div>
